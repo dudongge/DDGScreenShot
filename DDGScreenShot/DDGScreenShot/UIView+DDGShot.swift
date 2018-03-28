@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import ObjectiveC
 
 private var DDGViewScreenShotKey_IsShoting: String = "DDGViewScreenShot_AssoKey_isShoting"
 

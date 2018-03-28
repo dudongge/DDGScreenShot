@@ -26,7 +26,7 @@ class DDGWeblViewShot: UIViewController ,UIWebViewDelegate{
         
         let leftBtn = UIButton()
         leftBtn.backgroundColor = UIColor.yellow
-        leftBtn.setTitle("截ScrollImage", for: .normal)
+        leftBtn.setTitle("截webImage", for: .normal)
         leftBtn.setTitleColor(UIColor.blue, for: .normal)
         leftBtn.addTarget(self, action: #selector(DDGWeblViewShot.screenShotWebView), for: .touchUpInside)
         leftBtn.frame = CGRect(x: 20, y: height - 45, width: 150, height: 40)

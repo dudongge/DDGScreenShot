@@ -27,7 +27,7 @@ class DDGWKWebViewShot: UIViewController ,WKUIDelegate,WKNavigationDelegate {
         
         let leftBtn = UIButton()
         leftBtn.backgroundColor = UIColor.yellow
-        leftBtn.setTitle("截ScrollImage", for: .normal)
+        leftBtn.setTitle("截wkwebImage", for: .normal)
         leftBtn.setTitleColor(UIColor.blue, for: .normal)
         leftBtn.addTarget(self, action: #selector(DDGWKWebViewShot.screenShotWebView), for: .touchUpInside)
         leftBtn.frame = CGRect(x: 20, y: height - 45, width: 150, height: 40)
