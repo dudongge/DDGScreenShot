@@ -10,7 +10,7 @@ import UIKit
 import ObjectiveC
 extension UIImage {
     
-    func drawTextInImage(text: String,
+   public func drawTextInImage(text: String,
                          textColor: UIColor,
                          textFont: CGFloat,
                          textBgColor: UIColor,
@@ -35,7 +35,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
-    func composeImageWithLogo( logo: UIImage,
+    public func composeImageWithLogo( logo: UIImage,
                                logoOrigin: CGPoint,
                                logoSize:CGSize) -> UIImage {
         //以bgImage的图大小为底图
