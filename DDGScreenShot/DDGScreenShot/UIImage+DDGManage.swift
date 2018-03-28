@@ -10,31 +10,31 @@ import UIKit
 import ObjectiveC
 extension UIImage {
     
-   public func drawTextInImage(text: String,
-                         textColor: UIColor,
-                         textFont: CGFloat,
-                         textBgColor: UIColor,
-                         textX: CGFloat,
-                         textY: CGFloat )->UIImage {
-        //开启图片上下文
-        UIGraphicsBeginImageContext(self.size)
-        //图形重绘
-        self.draw(in: CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height))
-        //水印文字属性
-        let att = [NSAttributedStringKey.foregroundColor: textColor,
-                   NSAttributedStringKey.font: UIFont.systemFont(ofSize: textFont),
-                   NSAttributedStringKey.backgroundColor: textBgColor]
-        //水印文字大小
-        let text = NSString(string: text)
-        let size =  text.size(withAttributes: att)
-        //绘制文字
-        text.draw(in: CGRect.init(x: textX, y: textY, width: size.width, height: size.height), withAttributes: att)
-        //从当前上下文获取图片
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        //关闭上下文
-        UIGraphicsEndImageContext()
-        return image!
-    }
+//   public func drawTextInImage(text: String,
+//                         textColor: UIColor,
+//                         textFont: CGFloat,
+//                         textBgColor: UIColor,
+//                         textX: CGFloat,
+//                         textY: CGFloat )->UIImage {
+//        //开启图片上下文
+//        UIGraphicsBeginImageContext(self.size)
+//        //图形重绘
+//        self.draw(in: CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height))
+//        //水印文字属性
+//        let att = [NSAttributedStringKey.foregroundColor: textColor,
+//                   NSAttributedStringKey.font: UIFont.systemFont(ofSize: textFont),
+//                   NSAttributedStringKey.backgroundColor: textBgColor]
+//        //水印文字大小
+//        let text = NSString(string: text)
+//        let size =  text.size(withAttributes: att)
+//        //绘制文字
+//        text.draw(in: CGRect.init(x: textX, y: textY, width: size.width, height: size.height), withAttributes: att)
+//        //从当前上下文获取图片
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        //关闭上下文
+//        UIGraphicsEndImageContext()
+//        return image!
+//    }
     public func composeImageWithLogo( logo: UIImage,
                                logoOrigin: CGPoint,
                                logoSize:CGSize) -> UIImage {
