@@ -8,6 +8,34 @@
 
 import UIKit
 import ObjectiveC
+
+class DDGManage: NSObject {
+    static var share = DDGManage()
+    func composeImageWithLogo( bgImage: UIImage,
+                               imageRect: [CGRect],
+                               images:[UIImage]) -> UIImage {
+        //以bgImage的图大小为底图
+        let imageRef = bgImage.cgImage
+        let w: CGFloat = CGFloat((imageRef?.width)!)
+        let h: CGFloat = CGFloat((imageRef?.height)!)
+        //以1.png的图大小为画布创建上下文
+        UIGraphicsBeginImageContext(CGSize(width: w, height: h))
+        bgImage.draw(in: CGRect(x: 0, y: 0, width: w, height: h))
+        //先把1.png 画到上下文中
+        for i in 0..<images.count {
+            images[i].draw(in: CGRect(x: imageRect[i].origin.x,
+                                      y: imageRect[i].origin.y,
+                                      width: imageRect[i].size.width,
+                                      height:imageRect[i].size.height))
+        }
+        //再把小图放在上下文中
+        let resultImg: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+        //从当前上下文中获得最终图片
+        UIGraphicsEndImageContext()
+        return resultImg!
+    }
+}
+
 extension UIImage {
     
 //   public func drawTextInImage(text: String,

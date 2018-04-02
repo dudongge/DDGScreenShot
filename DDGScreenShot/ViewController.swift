@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
    
     var tableView: UITableView!
-    var dataSource = ["view截屏","scollView 截屏(长图)","web 截屏(长图)","wkWebView 截图（生成长图）","图片合成（在图片上加logo)","给截图打上标签，文本"]
+    var dataSource = ["view截屏","scollView 截屏(长图)","web 截屏(长图)","wkWebView 截图（生成长图）","多图片图片合成（在图片上加logo)","给截图打上标签，文本"]
     override func viewDidLoad() {
         super.viewDidLoad()
         

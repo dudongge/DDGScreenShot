@@ -44,6 +44,11 @@ DDGScreenShot截屏图片处理，只需一句代码，即可搞定复杂屏幕�
                          textY: CGFloat ) 
      传入 文字、文字颜色、字体大小、背景颜色，字体起始位置 就可以得到一张生成好的带标签的图片
          注，此方法在提交pod有问题，故将方法屏蔽，有需要的可以拷贝代码，到本地
+## image 加 标签，水印，文字
+     func composeImageWithLogo( bgImage: UIImage,
+     imageRect: [CGRect],
+     images:[UIImage]) -> UIImage {
+     传入背景图片 ，各个图片的frame 图片数组，就可以得到自己想要的图片拼接效果了 
 
 ## 使用pod
      iOS 9.0+, Swift 4.0+(Compatiable)
