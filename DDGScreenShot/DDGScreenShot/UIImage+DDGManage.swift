@@ -11,7 +11,7 @@ import ObjectiveC
 
 class DDGManage: NSObject {
     static var share = DDGManage()
-    func composeImageWithLogo( bgImage: UIImage,
+    public func composeImageWithLogo( bgImage: UIImage,
                                imageRect: [CGRect],
                                images:[UIImage]) -> UIImage {
         //以bgImage的图大小为底图
