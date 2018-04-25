@@ -2,7 +2,7 @@
 DDGScreenShot截屏图片处理，只需一句代码，即可搞定复杂屏幕截屏（如view ScrollView webView wkwebView），图片处理（加logo 打标签）
 对原有代码没有侵入性  部分效果如下
 
- ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/show.gif)
+ ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showView.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showScrollView.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showWebView.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showImagesCombin.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showImageLogo.gif)
 ## 使用方法：
 直接拖入方法：将工具类 DDGScreenShot 文件拖入即可（目前使用的是最新的swift4.0语言）。
    ## view截屏：
