@@ -34,6 +34,91 @@ class DDGManage: NSObject {
         UIGraphicsEndImageContext()
         return resultImg!
     }
+    
+    /*
+     ** 用绘图方式将图片进行圆角裁剪
+     ** imageName--传头头像名称
+     */
+    
+    public func tailoringImage(_ imageName: String) -> UIImage? {
+        let image = UIImage(named: imageName)
+        if image == nil {
+            return UIImage()
+        }
+        //开启上下文
+        UIGraphicsBeginImageContext((image?.size)!)
+        //设置一个圆形的裁剪区域
+        let path = UIBezierPath(ovalIn: CGRect(x: 0,
+                                             y: 0,
+                                             width: (image?.size.width)!,
+                                             height: (image?.size.height)!))
+        
+        //把路径设置为裁剪区域(超出裁剪区域以外的内容会被自动裁剪掉)
+        path.addClip()
+        //把图片绘制到上下文当中
+        image?.draw(at: CGPoint.zero)
+        //从上下文当中生成一张图片
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        //关闭上下文
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    /**
+     ** 用异步绘图方式将图片进行圆角裁剪
+     - imageName--传头头像名称
+     - parameter completed:    异步完成回调(主线程回调)
+     */
+    public  func async_tailoringImage(_ imageName: String,completed:@escaping (UIImage?) -> ()) {
+
+        DispatchQueue.global().async{
+            let newImage = self.tailoringImage(imageName)
+            DispatchQueue.main.async(execute: {
+                completed(newImage)
+            })
+        }
+    }
+    /**
+     ** 用异步绘图方式将图片进行任意圆角裁剪
+     - imageName --传头头像名称
+     - cornerRadius --传头头像名称
+     */
+    public func tailoringImage(_ imageName: String,withRadius radius: CGFloat) -> UIImage? {
+        let image = UIImage(named: imageName)
+        if image == nil {
+            return UIImage()
+        }
+        //开启上下文
+        UIGraphicsBeginImageContext((image?.size)!)
+        //设置一个圆形的裁剪区域
+        let path = UIBezierPath(roundedRect: CGRect(x: 0,
+                                                    y: 0,
+                                                    width: (image?.size.width)!,
+                                                    height: (image?.size.height)!), cornerRadius: radius)
+        
+        //把路径设置为裁剪区域(超出裁剪区域以外的内容会被自动裁剪掉)
+        path.addClip()
+        //把图片绘制到上下文当中
+        image?.draw(at: CGPoint.zero)
+        //从上下文当中生成一张图片
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        //关闭上下文
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    /**
+     ** 用异步绘图方式将图片进行任意圆角裁剪
+     - imageName --传头头像名称
+     - cornerRadius --要设置圆角的大小
+     - parameter completed:    异步完成回调(主线程回调)
+     */
+    public func async_tailoringImage(_ imageName: String,withRadius radius: CGFloat,completed:@escaping (UIImage?) -> ()) -> Void {
+        DispatchQueue.global().async{
+            let newImage = self.tailoringImage(imageName, withRadius: radius)
+            DispatchQueue.main.async(execute: {
+                completed(newImage)
+            })
+        }
+    }
 }
 
 extension UIImage {

@@ -1,5 +1,5 @@
 ## DDGScreenShot
-DDGScreenShot截屏图片处理，只需一句代码，即可搞定复杂屏幕截屏（如view ScrollView webView wkwebView），图片处理（加logo 打标签）
+DDGScreenShot截屏图片处理，只需一句代码，即可搞定复杂屏幕截屏（如view ScrollView webView wkwebView），图片处理（加logo 打标签）文本，子线程（裁剪，切圆角）等
 对原有代码没有侵入性  部分效果如下
 
  ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showView.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showScrollView.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showWebView.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showImagesCombin.gif) ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/showImageLogo.gif)

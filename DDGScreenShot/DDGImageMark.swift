@@ -25,6 +25,21 @@ class DDGImageMark: UIViewController {
 //        testImageView.frame = CGRect(x: 10, y: 100, width: width - 20 , height: height - 200)
 //        self.view.addSubview(testImageView)
         
+        let imageView = UIImageView()
+        self.view.addSubview(imageView)
+        imageView.frame = CGRect(x: 50, y: 150, width: 100, height: 100)
+        //imageView.image = DDGManage.share.tailoringImage("logo")
+        DDGManage.share.async_tailoringImage("logo", completed: { (image)  in
+            imageView.image = image!
+        })
+        
+        let imageView2 = UIImageView()
+        self.view.addSubview(imageView2)
+        imageView2.frame = CGRect(x: 50, y: 250, width: 200, height: 200)
+        //imageView2.image = DDGManage.share.tailoringImage("logo", withRadius: 40.0)
+        DDGManage.share.async_tailoringImage("logo", withRadius: 50) { (image) in
+            imageView2.image = image!
+        }
     }
 
     override func didReceiveMemoryWarning() {
