@@ -48,13 +48,21 @@ DDGScreenShot截屏图片处理，只需一句代码，即可搞定复杂屏幕�
      func composeImageWithLogo( bgImage: UIImage,
      imageRect: [CGRect],
      images:[UIImage]) -> UIImage {
-     传入背景图片 ，各个图片的frame 图片数组，就可以得到自己想要的图片拼接效果了 
-
+     传入背景图片 ，各个图片的frame 图片数组，就可以得到自己想要的图片拼接效果了
+## image 图片裁剪
+    DDGManage.share.async_tailoringImage("logo", completed: { (image)  in
+        拿到 image 
+        各种复杂装逼操作
+    })
+    DDGManage.share.async_tailoringImage("logo", withRadius: 50) { (image) in
+        拿到 image 
+        各种复杂装逼操作
+    }
 ## 使用pod
      iOS 9.0+, Swift 4.0+(Compatiable)
         使用pod 导入
         ```
-        pod 'DDGScreenShot', '~> 1.0.1'
+        pod 'DDGScreenShot', '~> 1.1.3'
         ```
 
         
