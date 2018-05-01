@@ -46,6 +46,18 @@
 		F70BFBB9206B40DB000BE450 /* WKWebView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70BFBAF206B40DB000BE450 /* WKWebView+DDGShot.swift */; };
 		F70BFBBA206B40DB000BE450 /* WKWebView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70BFBAF206B40DB000BE450 /* WKWebView+DDGShot.swift */; };
 		F70BFBBB206B40DB000BE450 /* WKWebView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70BFBAF206B40DB000BE450 /* WKWebView+DDGShot.swift */; };
+		F770EFDF2095BD3B00B83B4E /* DDGShotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFDE2095BD3B00B83B4E /* DDGShotImageView.swift */; };
+		F770EFE02095BD3B00B83B4E /* DDGShotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFDE2095BD3B00B83B4E /* DDGShotImageView.swift */; };
+		F770EFE12095BD3B00B83B4E /* DDGShotImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFDE2095BD3B00B83B4E /* DDGShotImageView.swift */; };
+		F770EFE320972D7600B83B4E /* DDGClearImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFE220972D7600B83B4E /* DDGClearImageView.swift */; };
+		F770EFE420972D7600B83B4E /* DDGClearImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFE220972D7600B83B4E /* DDGClearImageView.swift */; };
+		F770EFE520972D7600B83B4E /* DDGClearImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFE220972D7600B83B4E /* DDGClearImageView.swift */; };
+		F770EFE720984C3F00B83B4E /* DDGImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFE620984C3F00B83B4E /* DDGImageFilter.swift */; };
+		F770EFE820984C3F00B83B4E /* DDGImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFE620984C3F00B83B4E /* DDGImageFilter.swift */; };
+		F770EFE920984C3F00B83B4E /* DDGImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFE620984C3F00B83B4E /* DDGImageFilter.swift */; };
+		F770EFEB209856B900B83B4E /* DDGSeniorImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFEA209856B900B83B4E /* DDGSeniorImageFilter.swift */; };
+		F770EFEC209856B900B83B4E /* DDGSeniorImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFEA209856B900B83B4E /* DDGSeniorImageFilter.swift */; };
+		F770EFED209856B900B83B4E /* DDGSeniorImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F770EFEA209856B900B83B4E /* DDGSeniorImageFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +101,10 @@
 		F70BFBAD206B40DB000BE450 /* UIScrollView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+DDGShot.swift"; sourceTree = "<group>"; };
 		F70BFBAE206B40DB000BE450 /* UIView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DDGShot.swift"; sourceTree = "<group>"; };
 		F70BFBAF206B40DB000BE450 /* WKWebView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+DDGShot.swift"; sourceTree = "<group>"; };
+		F770EFDE2095BD3B00B83B4E /* DDGShotImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGShotImageView.swift; sourceTree = "<group>"; };
+		F770EFE220972D7600B83B4E /* DDGClearImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGClearImageView.swift; sourceTree = "<group>"; };
+		F770EFE620984C3F00B83B4E /* DDGImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGImageFilter.swift; sourceTree = "<group>"; };
+		F770EFEA209856B900B83B4E /* DDGSeniorImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDGSeniorImageFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +160,12 @@
 				F70BFBA7206B40CC000BE450 /* ViewController.swift */,
 				F70BFB90206B40B8000BE450 /* DDGImageCompose.swift */,
 				F70BFB94206B40BA000BE450 /* DDGImageMark.swift */,
+				F770EFDE2095BD3B00B83B4E /* DDGShotImageView.swift */,
+				F770EFE220972D7600B83B4E /* DDGClearImageView.swift */,
 				F70BFB92206B40B9000BE450 /* DDGScollViewShot.swift */,
 				F70BFB8F206B40B8000BE450 /* DDGViewShot.swift */,
+				F770EFE620984C3F00B83B4E /* DDGImageFilter.swift */,
+				F770EFEA209856B900B83B4E /* DDGSeniorImageFilter.swift */,
 				F70BFB91206B40B9000BE450 /* DDGWeblViewShot.swift */,
 				F70BFB93206B40BA000BE450 /* DDGWKWebViewShot.swift */,
 				F70BFB65206B4078000BE450 /* Main.storyboard */,
@@ -321,16 +341,20 @@
 			files = (
 				F70BFBA1206B40BA000BE450 /* DDGWKWebViewShot.swift in Sources */,
 				F70BFB9E206B40BA000BE450 /* DDGScollViewShot.swift in Sources */,
+				F770EFDF2095BD3B00B83B4E /* DDGShotImageView.swift in Sources */,
 				F70BFBA4206B40BA000BE450 /* DDGImageMark.swift in Sources */,
+				F770EFEB209856B900B83B4E /* DDGSeniorImageFilter.swift in Sources */,
 				F70BFB98206B40BA000BE450 /* DDGImageCompose.swift in Sources */,
 				F70BFBB6206B40DB000BE450 /* UIView+DDGShot.swift in Sources */,
 				F70BFB62206B4078000BE450 /* AppDelegate.swift in Sources */,
 				F70BFB95206B40BA000BE450 /* DDGViewShot.swift in Sources */,
 				F70BFBA8206B40CC000BE450 /* ViewController.swift in Sources */,
 				F70BFBB0206B40DB000BE450 /* UIImage+DDGManage.swift in Sources */,
+				F770EFE320972D7600B83B4E /* DDGClearImageView.swift in Sources */,
 				F70BFBB9206B40DB000BE450 /* WKWebView+DDGShot.swift in Sources */,
 				F70BFB9B206B40BA000BE450 /* DDGWeblViewShot.swift in Sources */,
 				F70BFBB3206B40DB000BE450 /* UIScrollView+DDGShot.swift in Sources */,
+				F770EFE720984C3F00B83B4E /* DDGImageFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,16 +364,20 @@
 			files = (
 				F70BFB96206B40BA000BE450 /* DDGViewShot.swift in Sources */,
 				F70BFBA5206B40BA000BE450 /* DDGImageMark.swift in Sources */,
+				F770EFE02095BD3B00B83B4E /* DDGShotImageView.swift in Sources */,
 				F70BFBA2206B40BA000BE450 /* DDGWKWebViewShot.swift in Sources */,
+				F770EFEC209856B900B83B4E /* DDGSeniorImageFilter.swift in Sources */,
 				F70BFB77206B4078000BE450 /* DDGScreenShotTests.swift in Sources */,
 				F70BFBB7206B40DB000BE450 /* UIView+DDGShot.swift in Sources */,
 				F70BFB9C206B40BA000BE450 /* DDGWeblViewShot.swift in Sources */,
 				F70BFB99206B40BA000BE450 /* DDGImageCompose.swift in Sources */,
 				F70BFBA9206B40CC000BE450 /* ViewController.swift in Sources */,
 				F70BFBB1206B40DB000BE450 /* UIImage+DDGManage.swift in Sources */,
+				F770EFE420972D7600B83B4E /* DDGClearImageView.swift in Sources */,
 				F70BFBBA206B40DB000BE450 /* WKWebView+DDGShot.swift in Sources */,
 				F70BFB9F206B40BA000BE450 /* DDGScollViewShot.swift in Sources */,
 				F70BFBB4206B40DB000BE450 /* UIScrollView+DDGShot.swift in Sources */,
+				F770EFE820984C3F00B83B4E /* DDGImageFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,16 +387,20 @@
 			files = (
 				F70BFB97206B40BA000BE450 /* DDGViewShot.swift in Sources */,
 				F70BFBA6206B40BA000BE450 /* DDGImageMark.swift in Sources */,
+				F770EFE12095BD3B00B83B4E /* DDGShotImageView.swift in Sources */,
 				F70BFBA3206B40BA000BE450 /* DDGWKWebViewShot.swift in Sources */,
+				F770EFED209856B900B83B4E /* DDGSeniorImageFilter.swift in Sources */,
 				F70BFB82206B4078000BE450 /* DDGScreenShotUITests.swift in Sources */,
 				F70BFBB8206B40DB000BE450 /* UIView+DDGShot.swift in Sources */,
 				F70BFB9D206B40BA000BE450 /* DDGWeblViewShot.swift in Sources */,
 				F70BFB9A206B40BA000BE450 /* DDGImageCompose.swift in Sources */,
 				F70BFBAA206B40CC000BE450 /* ViewController.swift in Sources */,
 				F70BFBB2206B40DB000BE450 /* UIImage+DDGManage.swift in Sources */,
+				F770EFE520972D7600B83B4E /* DDGClearImageView.swift in Sources */,
 				F70BFBBB206B40DB000BE450 /* WKWebView+DDGShot.swift in Sources */,
 				F70BFBA0206B40BA000BE450 /* DDGScollViewShot.swift in Sources */,
 				F70BFBB5206B40DB000BE450 /* UIScrollView+DDGShot.swift in Sources */,
+				F770EFE920984C3F00B83B4E /* DDGImageFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
