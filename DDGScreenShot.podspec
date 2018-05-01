@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DDGScreenShot"
-  s.version      = "1.1.3"
+  s.version      = "1.1.5"
   s.summary      = "A short description of DDGScreenShot."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dudongge/DDGScreenShot.git", :tag => "1.1.3" }
+  s.source       = { :git => "https://github.com/dudongge/DDGScreenShot.git", :tag => "1.1.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
