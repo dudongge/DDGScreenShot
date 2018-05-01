@@ -10,7 +10,15 @@ import UIKit
 class ViewController: UIViewController {
    
     var tableView: UITableView!
-    var dataSource = ["view截屏","scollView 截屏(长图)","web 截屏(长图)","wkWebView 截图（生成长图）","多图片图片合成（在图片上加logo)","给截图打上标签，文本，裁剪，圆角"]
+    var dataSource = ["view截屏",
+                      "scollView 截屏(长图)",
+                      "web 截屏(长图)",
+                      "wkWebView 截图（生成长图）",
+                      "多图片图片合成（在图片上加logo)",
+                      "给截图打上标签，文本，裁剪，圆角",
+                      "截取图片的任意部分","图片擦除😜",
+                      "图片滤镜--怀旧，黑白，岁月，烙黄，冲印,...",
+                      "图片滤镜(高级)--饱和度，高斯模糊，老电影"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,9 +81,23 @@ extension ViewController: UITableViewDataSource {
             let imageMark = DDGImageMark()
             imageMark.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(imageMark, animated: true)
+        } else if indexPath.row == 6 {
+            let imageShot = DDGShotImageView()
+            imageShot.title = dataSource[indexPath.row]
+            self.navigationController?.pushViewController(imageShot, animated: true)
+        }else if indexPath.row == 7 {
+            let clearImage = DDGClearImageView()
+            clearImage.title = dataSource[indexPath.row]
+            self.navigationController?.pushViewController(clearImage, animated: true)
+        } else if indexPath.row == 8 {
+            let imageFilter = DDGImageFilter()
+            imageFilter.title = dataSource[indexPath.row]
+            self.navigationController?.pushViewController(imageFilter, animated: true)
+        } else if indexPath.row == 9 {
+            let seniorImageFilter = DDGSeniorImageFilter()
+            seniorImageFilter.title = dataSource[indexPath.row]
+            self.navigationController?.pushViewController(seniorImageFilter, animated: true)
         }
-        
     }
-    
 }
 

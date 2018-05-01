@@ -29,17 +29,33 @@ class DDGImageMark: UIViewController {
         self.view.addSubview(imageView)
         imageView.frame = CGRect(x: 50, y: 150, width: 100, height: 100)
         //imageView.image = DDGManage.share.tailoringImage("logo")
-        DDGManage.share.async_tailoringImage("logo", completed: { (image)  in
+        let logo = UIImage(named: "logo")
+        DDGManage.share.async_tailoringImage(logo!, completed: { (image)  in
             imageView.image = image!
         })
         
         let imageView2 = UIImageView()
         self.view.addSubview(imageView2)
         imageView2.frame = CGRect(x: 50, y: 250, width: 200, height: 200)
+        let logoImage = UIImage(named: "logo")
         //imageView2.image = DDGManage.share.tailoringImage("logo", withRadius: 40.0)
-        DDGManage.share.async_tailoringImage("logo", withRadius: 50) { (image) in
+        DDGManage.share.async_tailoringImage(logoImage!, withRadius: 50) { (image) in
             imageView2.image = image!
         }
+        
+        let imageView3 = UIImageView()
+        self.view.addSubview(imageView3)
+        imageView3.frame = CGRect(x: 50, y: 450, width: 100, height: 100)
+        //imageView2.image = DDGManage.share.tailoringImage("logo", withRadius: 40.0)
+        //imageView3.image = DDGManage.share.tailoringImage(UIImage(named: "logo")!, borderWidth: 4.0, borderColor: UIColor.red)
+        DDGManage.share.async_tailoringImageLayer(UIImage(named: "logo")!,
+                                                  borderWidth: 10.0,
+                                                  borderColor: UIColor.red) { (image) in
+              imageView3.image = image!
+                                                    
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
