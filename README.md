@@ -1,30 +1,45 @@
 ## DDGScreenShot
 DDGScreenShot , just one line of code, can handle the following functions, the part is still in the basic function, will continue to update, the latest version of the function is as follows.
+
 DDGScreenShot截屏图片处理，只需一句代码，即可搞定如下功能，部分还处于基础功能，会持续更新中，最新版本功能如下：
+
+
+```
+1. Complex screen capture （eg: view ScrollView webView wkwebView）
+2. Multi-picture image composition (with logo on the picture)(with a child
+thread method), etc.
+3. Label the screenshot, text, cut, rounded corners.
+4. Interception of any part of the image (interception, frame capture) "," image erasure😜
+5. Photo filter - nostalgic, black and white, years, branding, stamping.
+6. Image filter (advanced)- saturation, gaussian blur, old film, etc.
+```
+
 1. 复杂屏幕截屏（如view ScrollView webView wkwebView）
 2. 多图片图片合成（在图片上加logo)(有子线程方法)等
 3. 给截图打上标签，文本，裁剪，圆角
 4. 截取图片的任意部分（手势截取，frame截取）","图片擦除😜
 5. 图片滤镜--怀旧，黑白，岁月，烙黄，冲印,...
 6. 图片滤镜(高级)--饱和度，高斯模糊，老电影等
+### It is interesting that friends can join the group and discuss some problems related to image processing.
 ### 有兴趣是小伙伴可以加入群，探讨一些图片处理相关的问题：
+扫一扫加入群聊😜😜😜😜
 ![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/QQgroup.png)
+
+#### There is no intrusive part of the original code.
 #### 对原有代码没有侵入性  部分效果如下：
 
-![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/DDGImage0.gif)
-![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/DDGImage1.gif)!
+![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/DDGImage0.gif)![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/DDGImage1.gif)!
 
-
-## 使用方法：
+## How to use : 使用方法：
+Direct drag method: the utility classDDGScreenShot .File drag (currently used in the latest swift4.0 language,4.1 is fine)
+##
 直接拖入方法：将工具类 DDGScreenShot
-
-
 文件拖入即可（目前使用的是最新的swift4.0语言,4.1 也没问题）。
 ## view截屏：
 ```
 view.DDGScreenShot { (image) in
-拿到 image 
-各种复杂装逼操作
+get the image (拿到图片)
+Various complex loading operation。（各种复杂装逼操作）
 、、、、
 }
 ```
@@ -32,21 +47,21 @@ view.DDGScreenShot { (image) in
 ## ScrollView截屏：
 
 scrollView.DDGContentScrollScreenShot { (image) in
-拿到 image 
-各种复杂装逼操作
+get the image (拿到图片)
+Various complex loading operation。（各种复杂装逼操作）
 
 }
 
 
 ## webView截屏：
 webView.DDGContentscreenShot { (image) in
-拿到 image 
-各种复杂装逼操作
+get the image (拿到图片)
+Various complex loading operation。（各种复杂装逼操作）
 }
 ## wkwebView截屏： 方法和webView 一样，内部做了校验
 webView.DDGContentscreenShot { (image) in
-拿到 image 
-各种复杂装逼操作
+get the image (拿到图片)
+Various complex loading operation。（各种复杂装逼操作）
 }
 ## image 加 logo
 let image = image.composeImageWithLogo( logo: UIImage,
@@ -82,8 +97,8 @@ DDGManage.share.async_tailoringImage(image!, withRadius: 50) { (image) in
 DDGManage.share.async_tailoringImageLayer(image,
 borderWidth: 10.0,
 borderColor: UIColor.red) { (image) in
-拿到 image 
-各种复杂装逼操作 
+get the image (拿到图片)
+Various complex loading operation。（各种复杂装逼操作） 
 
 }
 ### 截取图片的任意部分 图片滤镜及高级用法
