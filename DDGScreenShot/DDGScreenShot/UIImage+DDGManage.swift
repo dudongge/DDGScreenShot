@@ -162,6 +162,45 @@ class DDGManage: NSObject {
         }
     }
     /**
+     ** frame截图（截取图片的任意部分）
+     - imageView --传图片
+     - bgView --截图背景
+     - parameter completed:    异步完成回调(主线程回调)
+     */
+    public func shotImage(image: UIImage?,byFrame frame: CGRect?) -> UIImage? {
+        if image == nil {
+            return nil
+        }
+        //开启一个位图上下文
+        UIGraphicsBeginImageContextWithOptions((image?.size)!, false, 0.0)
+        //用贝塞尔绘制
+        let path = UIBezierPath(rect: frame!)
+        //把路径设置为裁剪区域(超出裁剪区域以外的内容会被自动裁剪掉)
+        path.addClip()
+        //把图片绘制到上下文当中
+        image?.draw(at: CGPoint.zero)
+        //从上下文当中生成一张图片
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        //关闭上下文
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    /**
+     ** 异步截取 frame截图（截取图片的任意部分）
+     - imageView --传图片
+     - bgView --截图背景
+     - parameter completed:    异步完成回调(主线程回调)
+     */
+    public func async_shotImage(image: UIImage?,byFrame frame: CGRect?,completed:@escaping (UIImage?) -> ()) -> Void {
+        DispatchQueue.global().async{
+            let newImage = self.shotImage(image: image, byFrame: frame)
+            DispatchQueue.main.async(execute: {
+                completed(newImage)
+            })
+        }
+    }
+    
+    /**
      ** 用手势截图（截取图片的任意部分）
      - imageView --传图片
      - bgView --截图背景
