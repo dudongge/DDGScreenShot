@@ -119,6 +119,11 @@ DDGScreenShot is available under the MIT license. See the LICENSE file for more 
 如果有问题欢迎提出，QQ：532835032 ，如果对您有帮助，希望您动动鼠标，不吝给个star.!
 
 
+## instructions （备注）
+
+感谢   leewaycn 将本库截图功能翻译成OC，大家多了一个选择，附上链接，希望可以帮到你：
+https://github.com/leewaycn/LVScreenShot
+
 
 
 
