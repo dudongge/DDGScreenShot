@@ -45,7 +45,8 @@ view.DDGScreenShot { (image) in
 ```
 
 ## ScrollView截屏：
-```scrollView.DDGContentScrollScreenShot { (image) in
+```
+scrollView.DDGContentScrollScreenShot { (image) in
     get the image (拿到图片)
     Various complex loading operation。（各种复杂装逼操作）
 
@@ -73,7 +74,7 @@ webView.DDGContentscreenShot { (image) in
 ```
 传入 logo图片，logo位置 logo 大小 就可以得到一张生成好的图片 
 
-let image = image.composeImageWithLogo( logo: UIImage,
+    let image = image.composeImageWithLogo( logo: UIImage,
                                     logoOrigin: CGPoint,
                                     logoSize:CGSize) 
 ```
@@ -96,34 +97,37 @@ let image = image.composeImageWithLogo( logo: UIImage,
 ```
 传入背景图片 ，各个图片的frame 图片数组，就可以得到自己想要的图片拼接效果了
 
-func composeImageWithLogo( bgImage: UIImage,
+    func composeImageWithLogo( bgImage: UIImage,
                          imageRect: [CGRect],
                          images:[UIImage]) -> UIImage {
                          
-}
+    }
  
 ```
 
 ## image 图片裁剪圆角
 ```
 传入image 详见demo
+
     DDGManage.share.async_tailoringImage(image!, completed: { (image)  in
         拿到 image 
         各种复杂装逼操作
     })
 传入image withRadius：要截取的圆角  详见demo
+
     DDGManage.share.async_tailoringImage(image!, withRadius: 50) { (image) in
         拿到 image 
         各种复杂装逼操作
     }
 传入image withRadius：要截取的圆角 borderColor: 边框颜色 详见demo
+
     DDGManage.share.async_tailoringImageLayer(image,
                                         borderWidth: 10.0,
                                         borderColor: UIColor.red) { (image) in
                                         
         get the image (拿到图片)
         Various complex loading operation。（各种复杂装逼操作） 
-}
+    }
 ```
 
 ### 截取图片的任意部分 图片滤镜及高级用法
