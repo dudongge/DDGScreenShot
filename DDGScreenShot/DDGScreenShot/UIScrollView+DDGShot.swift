@@ -11,7 +11,7 @@ import WebKit
 
 public extension UIScrollView {
     
-    public func DDGContentScreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
+    func DDGContentScreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
         
         self.isShoting = true
         
@@ -24,7 +24,7 @@ public extension UIScrollView {
         let bakFrame     = self.frame
         let bakOffset    = self.contentOffset
         let bakSuperView = self.superview
-        let bakIndex     = self.superview?.subviews.index(of: self)
+        let bakIndex     = self.superview?.subviews.firstIndex(of: self)
         
         // Scroll To Bottom show all cached view
         if self.frame.size.height < self.contentSize.height {
@@ -79,7 +79,7 @@ public extension UIScrollView {
     
     // Simulate People Action, all the `fixed` element will be repeate
     // DDGContentScrollScreenShot will capture all content without simulate people action, more perfect.
-    public func DDGContentScrollScreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
+    func DDGContentScrollScreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
         
         self.isShoting = true
         
@@ -132,11 +132,11 @@ public extension UIScrollView {
 
 public extension UIWebView {
     
-    public func DDGContentscreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
+    func DDGContentscreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
         self.scrollView.DDGContentScreenShot(completionHandler)
     }
     
-    public func DDGContentScrollScreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
+    func DDGContentScrollScreenShot (_ completionHandler: @escaping (_ screenShotImage: UIImage?) -> Void) {
         self.scrollView.DDGContentScrollScreenShot(completionHandler)
     }
     

@@ -18,7 +18,7 @@ class DDGWKWebViewShot: UIViewController ,WKUIDelegate,WKNavigationDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         wkWebView = WKWebView()
-        wkWebView.frame = CGRect(x: 10, y: 100, width: width - 20 , height: height - 150)
+        wkWebView.frame = CGRect(x: 10, y: navHeight, width: width - 20 , height:height - navHeight - bottomMargint)
         self.view.addSubview(wkWebView)
         wkWebView.uiDelegate = self
         wkWebView.navigationDelegate = self
@@ -30,7 +30,7 @@ class DDGWKWebViewShot: UIViewController ,WKUIDelegate,WKNavigationDelegate {
         leftBtn.setTitle("截wkwebImage", for: .normal)
         leftBtn.setTitleColor(UIColor.blue, for: .normal)
         leftBtn.addTarget(self, action: #selector(DDGWKWebViewShot.screenShotWebView), for: .touchUpInside)
-        leftBtn.frame = CGRect(x: 20, y: height - 45, width: 150, height: 40)
+        leftBtn.frame =  CGRect(x: 20, y: height - bottomMargint, width:(width - 60) / 2, height: 40)
         self.view.addSubview(leftBtn)
         
         let rightBtn = UIButton()
@@ -38,11 +38,11 @@ class DDGWKWebViewShot: UIViewController ,WKUIDelegate,WKNavigationDelegate {
         rightBtn.setTitle("清除", for: .normal)
         rightBtn.setTitleColor(UIColor.blue, for: .normal)
         rightBtn.addTarget(self, action: #selector(DDGWKWebViewShot.clearShotScreen), for: .touchUpInside)
-        rightBtn.frame = CGRect(x: 190, y: height - 45, width: 150, height: 40)
+        rightBtn.frame = CGRect(x: (width - 60) / 2 + 40, y: height - bottomMargint, width: (width - 60) / 2, height: 40)
         self.view.addSubview(rightBtn)
         
         activity = UIActivityIndicatorView()
-        activity.activityIndicatorViewStyle = .whiteLarge
+        activity.style = .whiteLarge
         activity.frame = CGRect(x:width / 2.0 - 15, y: 70, width: 30, height: 30)
         activity.backgroundColor = UIColor.black
         activity.hidesWhenStopped = true

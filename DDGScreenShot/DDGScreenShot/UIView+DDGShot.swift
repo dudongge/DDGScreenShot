@@ -13,7 +13,7 @@ private var DDGViewScreenShotKey_IsShoting: String = "DDGViewScreenShot_AssoKey_
 
 public extension UIView {
     
-    public func ddgSetFrame(_ frame: CGRect) {
+    func ddgSetFrame(_ frame: CGRect) {
         // Do nothing, use for swizzling
     }
     
@@ -38,7 +38,7 @@ public extension UIView {
     
     // Ref: chromium source - snapshot_manager, fix wkwebview screenshot bug.
     
-    public func DDGContainsWKWebView() -> Bool {
+    func DDGContainsWKWebView() -> Bool {
         if self.isKind(of: WKWebView.self) {
             return true
         }
@@ -50,7 +50,7 @@ public extension UIView {
         return false
     }
     
-    public func DDGScreenShot(_ completionHandler: (_ screenShotImage: UIImage?) -> Void) {
+    func DDGScreenShot(_ completionHandler: (_ screenShotImage: UIImage?) -> Void) {
         
         self.isShoting = true
         let bounds = self.bounds

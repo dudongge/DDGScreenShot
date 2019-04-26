@@ -42,13 +42,13 @@ class DDGSeniorImageFilter: UIViewController {
         slider.maximumValue = Float(Double.pi)
         slider.minimumValue = Float(-Double.pi)
         slider.value = 0
-        slider.addTarget(self, action: #selector(DDGSeniorImageFilter.valueChanged), for: UIControlEvents.valueChanged)
+        slider.addTarget(self, action: #selector(DDGSeniorImageFilter.valueChanged), for: UIControl.Event.valueChanged)
         self.view.addSubview(slider)
         
         let inputImage = CIImage(image: originalImage)
         filter = CIFilter(name: "CIHueAdjust")
         filter.setValue(inputImage, forKey: kCIInputImageKey)
-        slider.sendActions(for: UIControlEvents.valueChanged)
+        slider.sendActions(for: UIControl.Event.valueChanged)
         
         
         let titleArr = ["原图","高斯模糊","老电影"]

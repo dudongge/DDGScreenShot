@@ -25,7 +25,7 @@ class DDGImageCompose: UIViewController {
         leftBtn.setTitle("加logo", for: .normal)
         leftBtn.setTitleColor(UIColor.blue, for: .normal)
         leftBtn.addTarget(self, action: #selector(DDGImageCompose.addLogo), for: .touchUpInside)
-        leftBtn.frame = CGRect(x: 20, y: height - 45, width: 100, height: 40)
+        leftBtn.frame = CGRect(x: 20, y: height - bottomMargint, width: (width - 60) / 2, height: 40)
         self.view.addSubview(leftBtn)
         
         let rightBtn = UIButton()
@@ -33,7 +33,7 @@ class DDGImageCompose: UIViewController {
         rightBtn.setTitle("多图片合成", for: .normal)
         rightBtn.setTitleColor(UIColor.blue, for: .normal)
         rightBtn.addTarget(self, action: #selector(DDGImageCompose.composeImages), for: .touchUpInside)
-        rightBtn.frame = CGRect(x: 190, y: height - 45, width: 100, height: 40)
+        rightBtn.frame = CGRect(x: (width - 60) / 2 + 40, y: height - bottomMargint, width: (width - 60) / 2, height: 40)
         self.view.addSubview(rightBtn)
     }
 

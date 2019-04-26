@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+let  navHeight: CGFloat       =  UIApplication.shared.statusBarFrame.size.height + 44;
+let  bottomMargint : CGFloat  =  (UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0) + 48;
 class DDGWeblViewShot: UIViewController ,UIWebViewDelegate{
     var webView: UIWebView!
     var storeScrollView: UIScrollView!
@@ -18,7 +19,7 @@ class DDGWeblViewShot: UIViewController ,UIWebViewDelegate{
         
         self.view.backgroundColor = UIColor.white
         webView = UIWebView()
-        webView.frame = CGRect(x: 10, y: 100, width: width - 20 , height: height - 150)
+        webView.frame = CGRect(x: 10, y:navHeight, width: width - 20 , height: height - navHeight - bottomMargint)
         self.view.addSubview(webView)
         webView.delegate = self
         webView.backgroundColor = UIColor.purple
@@ -29,7 +30,7 @@ class DDGWeblViewShot: UIViewController ,UIWebViewDelegate{
         leftBtn.setTitle("截webImage", for: .normal)
         leftBtn.setTitleColor(UIColor.blue, for: .normal)
         leftBtn.addTarget(self, action: #selector(DDGWeblViewShot.screenShotWebView), for: .touchUpInside)
-        leftBtn.frame = CGRect(x: 20, y: height - 45, width: 150, height: 40)
+        leftBtn.frame = CGRect(x: 20, y: height - bottomMargint, width:(width - 60) / 2, height: 40)
         self.view.addSubview(leftBtn)
         
         let rightBtn = UIButton()
@@ -37,11 +38,11 @@ class DDGWeblViewShot: UIViewController ,UIWebViewDelegate{
         rightBtn.setTitle("清除", for: .normal)
         rightBtn.setTitleColor(UIColor.blue, for: .normal)
         rightBtn.addTarget(self, action: #selector(DDGWeblViewShot.clearShotScreen), for: .touchUpInside)
-        rightBtn.frame = CGRect(x: 190, y: height - 45, width: 150, height: 40)
+        rightBtn.frame = CGRect(x: (width - 60) / 2 + 40, y: height - bottomMargint, width: (width - 60) / 2, height: 40)
         self.view.addSubview(rightBtn)
         
         activity = UIActivityIndicatorView()
-        activity.activityIndicatorViewStyle = .whiteLarge
+        activity.style = .whiteLarge
         activity.frame = CGRect(x:width / 2.0 - 15, y: 70, width: 30, height: 30)
         activity.backgroundColor = UIColor.black
         activity.hidesWhenStopped = true
