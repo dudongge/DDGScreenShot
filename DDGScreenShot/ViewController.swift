@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     var tableView: UITableView!
     var dataSource = ["view截屏",
                       "scollView 截屏(长图)",
-                      "web 截屏(长图)",
                       "wkWebView 截图（生成长图）",
                       "多图片图片合成（在图片上加logo)",
                       "给截图打上标签，文本，裁剪，圆角",
@@ -66,34 +65,30 @@ extension ViewController: UITableViewDataSource {
             scollsViewShot.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(scollsViewShot, animated: true)
         } else if indexPath.row == 2 {
-            let weblViewShot = DDGWeblViewShot()
-            weblViewShot.title = dataSource[indexPath.row]
-            self.navigationController?.pushViewController(weblViewShot, animated: true)
-        } else if indexPath.row == 3 {
             let wKWebViewShot = DDGWKWebViewShot()
             wKWebViewShot.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(wKWebViewShot, animated: true)
-        } else if indexPath.row == 4 {
+        } else if indexPath.row == 3 {
             let imageCompose = DDGImageCompose()
             imageCompose.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(imageCompose, animated: true)
-        } else if indexPath.row == 5 {
+        } else if indexPath.row == 4 {
             let imageMark = DDGImageMark()
             imageMark.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(imageMark, animated: true)
-        } else if indexPath.row == 6 {
+        } else if indexPath.row == 5 {
             let imageShot = DDGShotImageView()
             imageShot.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(imageShot, animated: true)
-        }else if indexPath.row == 7 {
+        }else if indexPath.row == 6 {
             let clearImage = DDGClearImageView()
             clearImage.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(clearImage, animated: true)
-        } else if indexPath.row == 8 {
+        } else if indexPath.row == 7 {
             let imageFilter = DDGImageFilter()
             imageFilter.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(imageFilter, animated: true)
-        } else if indexPath.row == 9 {
+        } else if indexPath.row == 8 {
             let seniorImageFilter = DDGSeniorImageFilter()
             seniorImageFilter.title = dataSource[indexPath.row]
             self.navigationController?.pushViewController(seniorImageFilter, animated: true)
