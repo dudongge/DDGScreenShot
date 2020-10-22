@@ -54,14 +54,6 @@ scrollView.DDGContentScrollScreenShot { (image) in
 
 ```
 
-## webView截屏：
-```
-webView.DDGContentscreenShot { (image) in
-    get the image (拿到图片)
-    Various complex loading operation。（各种复杂装逼操作）
-}
-```
-
 ## wkwebView截屏： 方法和webView 一样，内部做了校验
 ```
 webView.DDGContentscreenShot { (image) in
