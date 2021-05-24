@@ -20,10 +20,6 @@ thread method), etc.
 4. 截取图片的任意部分（手势截取，frame截取）","图片擦除😜
 5. 图片滤镜--怀旧，黑白，岁月，烙黄，冲印,...
 6. 图片滤镜(高级)--饱和度，高斯模糊，老电影等
-### It is interesting that friends can join the group and discuss some problems related to image processing.
-### 有兴趣是小伙伴可以加入群，探讨一些图片处理相关的问题：
-扫一扫加入群聊😜😜😜😜
-![image](https://raw.githubusercontent.com/dudongge/DDGScreenShot/master/gif/QQgroup.png)
 
 #### There is no intrusive part of the original code.
 #### 对原有代码没有侵入性  部分效果如下：
